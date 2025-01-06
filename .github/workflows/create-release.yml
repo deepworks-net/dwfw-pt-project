@@ -1,0 +1,11 @@
+name: Create GitHub Release
+
+on:
+  # Keep existing trigger for this repo
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  create_github_release:
+    uses: deepworks-net/github.actions/.github/workflows/create-release.yml@main

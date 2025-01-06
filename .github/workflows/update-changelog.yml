@@ -1,0 +1,13 @@
+name: Update Changelog
+
+on:
+  pull_request:
+    branches:
+      - staging
+    types: [closed]
+
+jobs:
+  update_changelog:
+    uses: deepworks-net/github.actions/.github/workflows/update-changelog.yml@main
+    with:
+      config-path: .github/release-drafter.yml
