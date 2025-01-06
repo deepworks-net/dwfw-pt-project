@@ -1,0 +1,10 @@
+name: Build and Publish Documentation
+
+on:
+  push:
+    branches: 
+      - main
+      
+jobs:
+  deploy_gh_pages:
+    uses: deepworks-net/github.actions/.github/workflows/mkdocs-gh-pages.yml@main
